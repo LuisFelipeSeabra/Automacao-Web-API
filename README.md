@@ -11,9 +11,14 @@
 2. [Projeto Automação API](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/RegresAPI)
 
 
-### Projeto Automação WEB
+## Projeto Automação WEB
+Foi utilizado o Automation Practice (e-commerce website) para criação de testes automatizados e2e.
+Linguagem: Java
+Framework para automação: Selenium Webdriver.
+Padrão de projeto: Page Objects
 
-História do Usuário #1:
+
+#### História do Usuário e Produtos a serem comprados:
 Como um cliente cadastrado no automationpractice.com
 Eu quero fazer a compra de ao menos três produtos
 Para que eu possa estar bem vestida
@@ -24,23 +29,24 @@ Os seguintes produtos do e-commerce devem ser utilizados, no tamanho e cor infor
  - Blouse na quantidade 2
  - Printed Dress
 
-1. Estruturação do Script:
 
-├── /AutomationProject               # Arquivos e pastas do framework.                                                                                                           
-    ├── src/main/java                         # Pasta com o apk.                                                                                                                 
-        ├── br.df.lseabra.core                        # Pasta com logs e screenshots.                                                                                             
-            ├── BasePage.java                    
-            ├── BaseTest.java                 # Pasta que contém as keywords de config e page objects.
-            ├── BaseTestSecundaria.java            # Classe que contém as configurações do projeto: abrir/fechar app e desired capabilities.
-            ├── DriverFactory.java      # Classe que contém as ações e elementos do projeto.
-            ├── Propriedades.java                     # Pasta que contém steps do projeto.
-            ├── Steps.java               # Arquivo que contém importações e bibliotecas do projeto.
-        ├── br.df.lseabra.page                        # Pasta com logs e screenshots.
-        ├── br.df.lseabra.test                        # Pacote de testes
-        ├── br.df.lseabra.suit  
-            ├── SuiteSemLoginTest.java
-            ├── 
 
+#### Estruturação do Projeto:
+```
+├── /AutomationProject                                # Projeto                                                                                          
+    ├── src/main/java                                 #                                                                                                         
+        ├── br.df.lseabra.core                        # Pacote de Core                                                                                        
+            ├── BasePage.java                         # Classe que será extendida pelas classes de page/ vários métodos que podem ser utilizados
+            ├── BaseTest.java                         # classe que será extendida pelas classes de teste/ método de screenshot
+            ├── DriverFactory.java                    # Classe contendo propriedades do ChromeDriver
+            ├── Propriedades.java                     # Classe de propriedades
+            ├── Steps.java                            # Classe java criada para criação de Jornadas(Métodos com diversos outros métodos das pages)
+        ├── br.df.lseabra.page                        # Pacote de Pages
+        ├── br.df.lseabra.test                        # Pacote de Testes
+        ├── br.df.lseabra.suit                        # Pacote de Suites
+            ├── SuiteSemLoginTest.java                # Suite de teste voltada para testes onde o cliente não possui Login e seu cadastro é efetuado durante a compra
+            ├── SuiteTest.java                        # Suite de teste voltada para testes onde o cliente efetua Login ao entrar no site
+```
 
 #### Technology
 
@@ -48,12 +54,53 @@ Estão são as tecnologias utilizadas no projeto:
   * JRE 1.8.0_281
   * Maven
   * Selenium-java 3.4.0
-  * eclipse
+  * Eclipse
+  * Windows 10
+
+#### Indisponilidade do Sistema 
+Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
+
+Erro:
+Resource Limit Is Reached
+The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.
+
+#### Execuções das Suites:
+
+![image](https://user-images.githubusercontent.com/49051123/116761573-6662e580-a9ee-11eb-8e93-33ed61bb99e8.png)
+![image](https://user-images.githubusercontent.com/49051123/116761604-7d093c80-a9ee-11eb-873b-23980622381a.png)
 
 
-### Projeto Automação API
-1.
+## Projeto Automação API
+Foi Desenvolvida uma automação de testes para a API cuja documentação está descrita no site (https://reqres.in/).
 
+#### Cenários:
+- Validar o método POST 
+- Validar o método GET SINGLE USER
+- Valide o método GET LIST USERS
+- Valide o método PATCH
 
+#### Estruturação do Projeto:
+```
+├── /ReqresAPI                                        # Projeto                                                                                          
+    ├── src/main/java                                 #                                                                                                         
+        ├── br.df.lseabra.core                        # Pacote de Core                                                                                        
+            ├── BaseTest.java                         # classe que será extendida pelas classes de teste
+            ├── Constantes.java                       # Interface contendo porta, Url e Content type
+        ├── br.df.lseabra.test                        # Pacote de Testes
+            ├── ReqresTest.java                       #Classe com testes
+```
+#### Technology
+
+Estão são as tecnologias utilizadas no projeto:
+  * JRE 1.8.0_281
+  * Maven
+  * io.rest-assured 4.0.0 
+  * groovy 3.0.5
+  * Eclipse
+  * Windows 10
+
+#### Execução dos testes:
+
+![image](https://user-images.githubusercontent.com/49051123/116761488-30bdfc80-a9ee-11eb-9427-db2e093b59fd.png)
 
 
