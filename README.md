@@ -26,9 +26,9 @@ Os seguintes produtos do e-commerce devem ser utilizados, no tamanho e cor infor
 
 1. Estruturação do Script:
 
-├── /AutomationProject               # Arquivos e pastas do framework.
-    ├── src/main/java                         # Pasta com o apk.
-        ├── br.df.lseabra.core                        # Pasta com logs e screenshots.
+├── /AutomationProject               # Arquivos e pastas do framework.                                                                                                           
+    ├── src/main/java                         # Pasta com o apk.                                                                                                                 
+        ├── br.df.lseabra.core                        # Pasta com logs e screenshots.                                                                                             
             ├── BasePage.java                    
             ├── BaseTest.java                 # Pasta que contém as keywords de config e page objects.
             ├── BaseTestSecundaria.java            # Classe que contém as configurações do projeto: abrir/fechar app e desired capabilities.
