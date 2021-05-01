@@ -19,7 +19,7 @@ Framework para automação: Selenium Webdriver.
 Padrão de projeto: Page Objects
 ```
 
-#### estória do Usuário:
+#### História do Usuário:
 Como um cliente cadastrado no automationpractice.com
 Eu quero fazer a compra de ao menos três produtos
 Para que eu possa estar bem vestida
@@ -49,6 +49,28 @@ Os seguintes produtos do e-commerce devem ser utilizados, no tamanho e cor infor
             ├── SuiteTest.java                        # Suite de teste voltada para testes onde o cliente efetua Login ao entrar no site
 ```
 
+
+#### Executar o Teste
+Executar pela IDE de sua preferência os arquivos: 
+```
+SuiteSemLoginTest.java                             # Suite de teste para quando há cadastro de cliente durante a compra
+SuiteTest.java                                     # Suite de teste para quando há login de cliente ao entrar no site
+```
+
+#### Execuções das Suites:
+
+![image](https://user-images.githubusercontent.com/49051123/116761573-6662e580-a9ee-11eb-8e93-33ed61bb99e8.png)
+![image](https://user-images.githubusercontent.com/49051123/116761604-7d093c80-a9ee-11eb-873b-23980622381a.png)
+
+#### Pontos observados:
+Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
+
+Erro:
+```
+Resource Limit Is Reached
+The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.
+```
+
 #### Tecnologia
 
 Tecnologias utilizadas no projeto:
@@ -56,19 +78,6 @@ Tecnologias utilizadas no projeto:
   * Maven
   * Selenium-java 3.4.0
   * Eclipse
-
-
-#### Pontos observados:
-Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
-
-Erro:
-Resource Limit Is Reached
-The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.
-
-#### Execuções das Suites:
-
-![image](https://user-images.githubusercontent.com/49051123/116761573-6662e580-a9ee-11eb-8e93-33ed61bb99e8.png)
-![image](https://user-images.githubusercontent.com/49051123/116761604-7d093c80-a9ee-11eb-873b-23980622381a.png)
 
 
 ## Projeto Automação API
@@ -90,6 +99,17 @@ Foi Desenvolvida uma automação de testes para a API cuja documentação está 
         ├── br.df.lseabra.test                        # Pacote de Testes
             ├── ReqresTest.java                       #Classe com testes
 ```
+
+#### Executar o Teste
+Executar pela IDE de sua preferência os arquivos: 
+```
+Suite.java                                     # Suite de teste para quando há login de cliente ao entrar no site
+```
+
+#### Execução dos testes:
+
+![image](https://user-images.githubusercontent.com/49051123/116761488-30bdfc80-a9ee-11eb-9427-db2e093b59fd.png)
+
 #### Tecnologia:
 
 Tecnologias utilizadas no projeto:
@@ -98,10 +118,4 @@ Tecnologias utilizadas no projeto:
   * io.rest-assured 4.0.0 
   * groovy 3.0.5
   * Eclipse
-
-
-#### Execução dos testes:
-
-![image](https://user-images.githubusercontent.com/49051123/116761488-30bdfc80-a9ee-11eb-9427-db2e093b59fd.png)
-
 
