@@ -15,7 +15,8 @@ public class RegisterTest extends BaseTest {
 
 		given()
 			.body(registro)	
-		.when().post("/api/register")
+		.when()
+			.post("/api/register")
 		.then()
 			.log().all()
 			.statusCode(200)
@@ -32,9 +33,9 @@ public class RegisterTest extends BaseTest {
 		.when()
 			.post("/api/register")
 		.then()
-				.log().all()
-				.statusCode(400)
-				.body("error",Matchers.is("Missing password"));
+			.log().all()
+			.statusCode(400)
+			.body("error",Matchers.is("Missing password"));
 	}
 
 }
