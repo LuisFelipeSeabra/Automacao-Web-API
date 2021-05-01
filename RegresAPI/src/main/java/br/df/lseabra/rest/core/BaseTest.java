@@ -38,11 +38,17 @@ public class BaseTest implements Constantes  {
 		return formatarDate.format(data);
 	}
 
-	public Map<String,String > criarCliente(String key,String value,String key1,String value1 ) {
-		Map<String, String> cliente = new HashMap<String, String>();
-		cliente.put(key, value);
-		cliente.put(key1, value1);
-		return cliente;
+	public Map<String,String > criarElemento(String key,String value,String key1,String value1 ) {
+		Map<String, String> elemento = new HashMap<String, String>();
+		elemento.put(key, value);
+		elemento.put(key1, value1);
+		return elemento;
+	}
+	public Map<String,String > criarElemento(String key,String value ) {
+		Map<String, String> elemento = new HashMap<String, String>();
+		elemento.put(key, value);
+		return elemento;
 	}	
+
 
 }
