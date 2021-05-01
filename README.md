@@ -111,7 +111,7 @@ Suite.java                                     # Suite de teste para quando há 
 
 #### Execução dos testes:
 
-![image](https://user-images.githubusercontent.com/49051123/116761488-30bdfc80-a9ee-11eb-9427-db2e093b59fd.png)
+![image](https://user-images.githubusercontent.com/49051123/116794905-26ac0480-aaa7-11eb-9c21-bf64ae2837b7.png)
 
 #### Tecnologia:
 
