@@ -97,7 +97,10 @@ Foi Desenvolvida uma automação de testes para a API cuja documentação está 
             ├── BaseTest.java                         # classe que será extendida pelas classes de teste
             ├── Constantes.java                       # Interface contendo porta, Url e Content type
         ├── br.df.lseabra.test                        # Pacote de Testes
-            ├── ReqresTest.java                       #Classe com testes
+            ├── RegisterTest.java                     #Classe com testes refrentes a "Register"
+            ├── UserTest.java                         #Classe com testes refrentes a "User"
+        ├── br.df.lseabra.suite                       # Pacote de Suite
+            ├── Suite.java                            #Suite de testes
 ```
 
 #### Executar o Teste
