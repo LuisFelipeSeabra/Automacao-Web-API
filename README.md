@@ -13,12 +13,13 @@
 
 ## Projeto Automação WEB
 Foi utilizado o Automation Practice (e-commerce website) para criação de testes automatizados e2e.
+```
 Linguagem: Java
 Framework para automação: Selenium Webdriver.
 Padrão de projeto: Page Objects
+```
 
-
-#### História do Usuário e Produtos a serem comprados:
+#### estória do Usuário:
 Como um cliente cadastrado no automationpractice.com
 Eu quero fazer a compra de ao menos três produtos
 Para que eu possa estar bem vestida
@@ -48,16 +49,16 @@ Os seguintes produtos do e-commerce devem ser utilizados, no tamanho e cor infor
             ├── SuiteTest.java                        # Suite de teste voltada para testes onde o cliente efetua Login ao entrar no site
 ```
 
-#### Technology
+#### Tecnologia
 
-Estão são as tecnologias utilizadas no projeto:
+Tecnologias utilizadas no projeto:
   * JRE 1.8.0_281
   * Maven
   * Selenium-java 3.4.0
   * Eclipse
-  * Windows 10
 
-#### Indisponilidade do Sistema 
+
+#### Pontos observados:
 Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
 
 Erro:
@@ -73,7 +74,7 @@ The website is temporarily unable to service your request as it exceeded resourc
 ## Projeto Automação API
 Foi Desenvolvida uma automação de testes para a API cuja documentação está descrita no site (https://reqres.in/).
 
-#### Cenários:
+#### Endpoints:
 - Validar o método POST 
 - Validar o método GET SINGLE USER
 - Valide o método GET LIST USERS
@@ -89,15 +90,15 @@ Foi Desenvolvida uma automação de testes para a API cuja documentação está 
         ├── br.df.lseabra.test                        # Pacote de Testes
             ├── ReqresTest.java                       #Classe com testes
 ```
-#### Technology
+#### Tecnologia:
 
-Estão são as tecnologias utilizadas no projeto:
+Tecnologias utilizadas no projeto:
   * JRE 1.8.0_281
   * Maven
   * io.rest-assured 4.0.0 
   * groovy 3.0.5
   * Eclipse
-  * Windows 10
+
 
 #### Execução dos testes:
 
