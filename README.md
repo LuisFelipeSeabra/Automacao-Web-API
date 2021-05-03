@@ -64,9 +64,14 @@ SuiteTest.java                                     # Suite de teste para quando 
 
 
 #### Pontos observados:
-Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
+1.Mesmo com o uso da espera explicita(ExpectedConditions.presenceOfElementLocated) o sistema apresentava erros devido a velocidade das ações. 
+Em determinados momentos, clicava-se em "add cart" e posteriormente em "Proceed to checkout" para que o sitema fosse à tela de "Summary", ao chegar nesta página o produto não estava presente. 
+Para que o produto fosse apresentado no carrinho seria necessário um refresh, uma simples espera não resolveria o problema citado.
+Concluo assim, que o processamento do site encontra-se mais lento do que as ações e o uso da espera explicita(ExpectedConditions.presenceOfElementLocated) seria ineficaz. Com isso, fiz uso da do thread.sleep.
 
-Erros:
+2.Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
+
+Erros apresentados durante a execução:
 ```
 
 1. Resource Limit Is Reached
