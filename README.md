@@ -66,10 +66,13 @@ SuiteTest.java                                     # Suite de teste para quando 
 #### Pontos observados:
 Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
 
-Erro:
+Erros:
 ```
-Resource Limit Is Reached
+
+1. Resource Limit Is Reached
 The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.
+
+2. Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused
 ```
 
 #### Tecnologia
