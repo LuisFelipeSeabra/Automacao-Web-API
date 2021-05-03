@@ -17,25 +17,29 @@ public class Steps {
 	SummaryPage pageSummary = new SummaryPage();
 	SignInPage signIn = new SignInPage();
 	
-	public void adicionarProdutoAoCarrinho(String produto, String cor, String tamanho) {
+	public void adicionarProdutoAoCarrinho(String produto, String cor, String tamanho) throws InterruptedException {
+		espera();
 		pageIndex.pesquisar(produto);
 		pageIndex.clicarProduto(produto);
 		pageIndex.selecionarCor(cor);
 		pageIndex.selecionarTamanho(tamanho);
 		pageIndex.addCart();
 	}
-	public void adicionarProdutoAoCarrinho(String produto, String cor) {
+	public void adicionarProdutoAoCarrinho(String produto, String cor) throws InterruptedException {
+		espera();
 		pageIndex.pesquisar(produto);
 		pageIndex.clicarProduto(produto);
 		pageIndex.selecionarCor(cor);
 		pageIndex.addCart();
 	}
-	public void adicionarProdutoAoCarrinho(String produto) {
+	public void adicionarProdutoAoCarrinho(String produto) throws InterruptedException {
+		espera();
 		pageIndex.pesquisar(produto);
 		pageIndex.clicarProduto(produto);
 		pageIndex.addCart();
 	}
-	public void adicionarProdutoAoCarrinhoInserindoQuantidade(String produto, String qtd) {
+	public void adicionarProdutoAoCarrinhoInserindoQuantidade(String produto, String qtd) throws InterruptedException {
+		espera();
 		pageIndex.pesquisar(produto);
 		pageIndex.clicarProduto(produto);
 		pageIndex.setQtd(qtd);
@@ -103,7 +107,7 @@ public class Steps {
 	public void espera() throws InterruptedException {
 		Thread.sleep(1000);
 	}
-	public void registrarCliente(String email, String name, String lastname, String password, String address, String city, String state, String postcode,String mobilePhone, String alias)  {
+	public void registrarCliente(String email, String name, String lastname, String password, String address, String city, String state, String postcode,String mobilePhone, String alias) throws InterruptedException  {
 		signIn.setEmail(email);
 		signIn.clicarCriarConta();
 		signIn.clicarTitleMr();

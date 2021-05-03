@@ -10,7 +10,8 @@ public class IndexPage extends BasePage {
 		clicarBotao(By.xpath("//button[@name = 'submit_search']"));
 		
 	}
-	public void clicarProduto(String produto) {
+	public void clicarProduto(String produto) throws InterruptedException {
+		espera();
 		clicarBotao(By.xpath("//ul[@class='product_list grid row']//h5//a[@title = '"+produto+"']"));
 	}
 	public void selecionarCor(String cor) {
@@ -25,7 +26,8 @@ public class IndexPage extends BasePage {
 	public void selecionarTamanho(String tam) {
 		selecionarCombo("group_1", tam);
 	}
-	public void addCart() {
+	public void addCart() throws InterruptedException {
+		espera();
 		clicarBotao(By.xpath("//p[@id = 'add_to_cart']//button[@type = 'submit']"));
 	}
 	public String obterMensagem() {
@@ -49,5 +51,7 @@ public class IndexPage extends BasePage {
 	public Integer obterQuantidadeDeProdutosQueForamAdicionadosNoCarrinho() {
 		return obterQuantidadeDeProdutosQueForamAdicionadosNoCarrinho(By.xpath("//tbody//td[@class='cart_quantity text-center']//input[2]"));	
 	}
-	
+	public void espera() throws InterruptedException {
+		Thread.sleep(100);
+	}
 }

@@ -15,23 +15,14 @@ public class SummaryTest extends BaseTest {
 	@Test
 	public void verificarQuantidadeTotalDeProdutosAdicionadosAoCarrinho() throws InterruptedException {
 		//Verificar quantos tipos de produtos foram adicionados
-		Integer x = 3;
+		Integer x = 4;
 		Assert.assertEquals(x,steps.obterQuantosProdutosForamAdicionadosAoCarrinho());
 				
 		//Verificar quantidade de produtos que foram adicionados
-		Integer y = 4;
+		Integer y = 5;
 		Assert.assertEquals(y,steps.obterQuantidadeDeProdutosQueForamAdicionadosAoCarrinho());
 			
 		steps.clicarEmProsseguirTelaSummary();
 	}
-	@Test
-	public void excluirProdutoDocarrinho() throws InterruptedException {
-		steps.excluirProdutoDoCarrinho("Printed Dress");
-		steps.espera();
-		
-		//verifica se a exclusão foi feita
-		Assert.assertFalse(steps.verificaSeProdutoEstaNoCarrinho2("Printed Dress"));
-	}
-	
-	
+
 }
