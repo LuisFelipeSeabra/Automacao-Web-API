@@ -59,8 +59,9 @@ SuiteTest.java                                     # Suite de teste para quando 
 
 #### Execuções das Suites:
 
-![image](https://user-images.githubusercontent.com/49051123/116761573-6662e580-a9ee-11eb-8e93-33ed61bb99e8.png)
-![image](https://user-images.githubusercontent.com/49051123/116761604-7d093c80-a9ee-11eb-873b-23980622381a.png)
+![image](https://user-images.githubusercontent.com/49051123/116889586-1a3cbe80-ac03-11eb-804d-402f4563411d.png)
+![image](https://user-images.githubusercontent.com/49051123/116889610-232d9000-ac03-11eb-8341-20750cca1675.png)
+
 
 #### Pontos observados:
 Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
