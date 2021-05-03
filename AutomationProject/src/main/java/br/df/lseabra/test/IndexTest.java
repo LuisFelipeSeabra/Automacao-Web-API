@@ -39,10 +39,11 @@ public class IndexTest extends BaseTest {
 	@Test
 	public void selecionarProdutosEAdicionarAoCarrinho() throws InterruptedException {
 		steps.adicionarProdutoAoCarrinho("Printed Dress");
-		
+		steps.espera();
 		Assert.assertTrue(steps.obterMensagemDeSucessoAoAdicionarProdutoAoCarrinho());
-
+		steps.espera();
 		steps.clicarEmProceedToCheckout();
+		steps.espera();
 		Assert.assertTrue(steps.verificaSeProdutoEstaNoCarrinho("Printed Dress"));
 	}
 }

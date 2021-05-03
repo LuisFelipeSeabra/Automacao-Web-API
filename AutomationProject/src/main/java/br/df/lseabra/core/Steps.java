@@ -49,7 +49,8 @@ public class Steps {
 	public String obterQuantidadeDeProdutoParaUmItemEspecificoAdicionadoAoCarrinho(String Produto) {
 		return pageSummary.obterQtd(Produto);
 	}
-	public Boolean obterMensagemDeSucessoAoAdicionarProdutoAoCarrinho() {
+	public Boolean obterMensagemDeSucessoAoAdicionarProdutoAoCarrinho() throws InterruptedException {
+		espera();
 		return pageIndex.obterMensagem().contains("Product successfully added to your shopping cart");
 	}
 	public void clicarEmProceedToCheckout() throws InterruptedException {
@@ -103,7 +104,7 @@ public class Steps {
 		espera();
 		pageSummary.excluirProdutoDoCarrinho(produto);
 	}
-	//Mesmo com as Esperas Explicitas inseridas na "BasePage" fez-se necessário a utilização de Thread.sleep
+	//Mesmo com as Esperas Explicitas inseridas na "BasePage" fez-se necessário a utilização de Thread.sleep :/
 	public void espera() throws InterruptedException {
 		Thread.sleep(1000);
 	}
