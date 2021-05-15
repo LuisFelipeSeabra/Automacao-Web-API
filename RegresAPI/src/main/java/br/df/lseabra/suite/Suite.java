@@ -11,6 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	RegisterTest.class
 	
 })
+
 public class Suite {
 
 }
