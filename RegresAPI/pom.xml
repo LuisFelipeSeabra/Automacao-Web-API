@@ -66,8 +66,7 @@
 				<version>3.0.0-M5</version>
 				<configuration>
 					<includes>
-					<include>**/*rTest.java</include>
-						<include>**/*Teste.java</include>
+						<include>SuiteTeste.java</include>
 					</includes>
 				</configuration>
 			</plugin>
