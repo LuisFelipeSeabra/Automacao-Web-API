@@ -7,12 +7,18 @@
 
 ## Documentação útil
 
-1. [Projeto Automação WEB](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/AutomationProject)
-2. [Projeto Automação API](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/RegresAPI)
+1. [Automação Mobile](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/AutomationProject)
+2. [Planejamento de Casos de Testes](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/RegresAPI)
 
 
-## Projeto de Automação
+## Planejamento de casos de teste
+Para automação Mobile utilizou-se: o formato Gherkin para a criação dos cenários, Appium como ferramenta de automatização e RobotFramework como framework de desenvolvimento.
+```
 
+```
+
+## Projeto de Automação mobile
+Para automação Mobile utilizou-se: o formato Gherkin para a criação dos cenários, Appium como ferramenta de automatização e RobotFramework como framework de desenvolvimento.
 ```
 
 ```
@@ -32,7 +38,7 @@
 ```
 
 
-#### Executar o Teste
+#### Execução dos Testes
 Executar pela linha de comando: 
 ```
 cd C:\app\test
@@ -42,9 +48,6 @@ robot -d .logs garden.robot
 #### Execuções das Suites:
 
 ![image](https://user-images.githubusercontent.com/49051123/121474094-f7d45880-c999-11eb-9c49-f4cbaff55024.png)
-
-
-#### Pontos observados:
 
 
 #### Tecnologia
