@@ -1,7 +1,7 @@
 # Bem-vindo ao desafio
 
 <div align="center">
-  <img src="https://www.inbenta.com/wp-content/uploads/2016/11/LojasRennerLogo500x500_2015.jpg" width="300px"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Logo-Stone.svg/1200px-Logo-Stone.svg.png" width="300px"/>
 </div>
 
 
@@ -11,123 +11,47 @@
 2. [Projeto Automação API](https://github.com/LuisFelipeSeabra/prova_renner/tree/master/RegresAPI)
 
 
-## Projeto Automação WEB
-Foi utilizado o Automation Practice (e-commerce website) para criação de testes automatizados e2e.
-```
-Linguagem: Java
-Framework para automação: Selenium Webdriver.
-Padrão de projeto: Page Objects
+## Projeto de Automação
+
 ```
 
-#### História do Usuário:
-Como um cliente cadastrado no automationpractice.com
-Eu quero fazer a compra de ao menos três produtos
-Para que eu possa estar bem vestida
-
-Os seguintes produtos do e-commerce devem ser utilizados, no tamanho e cor informada:
- - Printed Chiffon Dress na cor verde e tamanho "M"
- - Faded Short Sleeve T-shirts na cor azul
- - Blouse na quantidade 2
- - Printed Dress
-
-
+```
 
 #### Estruturação do Projeto:
 ```
-├── /AutomationProject                                # Projeto                                                                                          
-    ├── src/main/java                                 #                                                                                                         
-        ├── br.df.lseabra.core                        # Pacote de Core                                                                                        
-            ├── BasePage.java                         # Classe que será extendida pelas classes de page/ vários métodos que podem ser utilizados
-            ├── BaseTest.java                         # classe que será extendida pelas classes de teste/ método de screenshot
-            ├── DriverFactory.java                    # Classe contendo propriedades do ChromeDriver
-            ├── Propriedades.java                     # Classe de propriedades
-            ├── Steps.java                            # Classe java criada para criação de Jornadas(Métodos com diversos outros métodos das pages)
-        ├── br.df.lseabra.page                        # Pacote de Pages
-        ├── br.df.lseabra.test                        # Pacote de Testes
-        ├── br.df.lseabra.suit                        # Pacote de Suites
-            ├── SuiteSemLoginTest.java                # Suite de teste voltada para testes onde o cliente não possui Login e seu cadastro é efetuado durante a compra
-            ├── SuiteTest.java                        # Suite de teste voltada para testes onde o cliente efetua Login ao entrar no site
+├── /App                                          # Projeto                                                                                          
+    ├── /resources                                #                                                                                                         
+        ├── base.robot                            # Estrutura com a base para os testes, os métodos criados aqui, serão executados por todos os testes.
+        ├── BDDpt-br.robot                        # Estrutura do BDD
+        ├── helper.robot                          # Estrutura com métodos que poderão ser utilizados pelos testes.
+    ├── /tests                                    # Pacote de testes
+        ├── /.logs                                # Log's das execuções/ Relatório de teste
+        ├── garden.robot                          # Testes a serem executados
+    ├── sunflower.apk                             # Aplicação a ser homologada
+        
 ```
 
 
 #### Executar o Teste
-Executar pela IDE de sua preferência os arquivos: 
+Executar pela linha de comando: 
 ```
-SuiteSemLoginTest.java                             # Suite de teste para quando há cadastro de cliente durante a compra
-SuiteTest.java                                     # Suite de teste para quando há login de cliente ao entrar no site
+cd C:\app\test
+robot -d .logs garden.robot
 ```
 
 #### Execuções das Suites:
 
-![image](https://user-images.githubusercontent.com/49051123/116889586-1a3cbe80-ac03-11eb-804d-402f4563411d.png)
-![image](https://user-images.githubusercontent.com/49051123/116889610-232d9000-ac03-11eb-8341-20750cca1675.png)
+![image](https://user-images.githubusercontent.com/49051123/121474094-f7d45880-c999-11eb-9c49-f4cbaff55024.png)
 
 
 #### Pontos observados:
-1.Mesmo com o uso da espera explicita(ExpectedConditions.presenceOfElementLocated) o sistema apresentava erros devido a velocidade das ações. 
-Em determinados momentos, clicava-se em "add cart" e posteriormente em "Proceed to checkout" para que o sitema fosse à tela de "Summary", ao chegar nesta página o produto não estava presente. 
-Para que o produto fosse apresentado no carrinho seria necessário um refresh, uma simples espera não resolveria o problema citado.
-Concluo assim, que o processamento do site encontra-se mais lento do que as ações e o uso da espera explicita(ExpectedConditions.presenceOfElementLocated) seria ineficaz. Com isso, fiz uso da do thread.sleep.
 
-2.Em determinadas horas do dia, o sistema apresenta inconsistências em relação aos recursos do próprio sistema. Caso a execução dos testes apresente erro, favor executar novamente.
-
-Erros apresentados durante a execução:
-```
-
-1. Resource Limit Is Reached
-The website is temporarily unable to service your request as it exceeded resource limit. Please try again later.
-
-2. Link to database cannot be established: SQLSTATE[HY000] [2002] Connection refused
-```
 
 #### Tecnologia
 
 Tecnologias utilizadas no projeto:
-  * JRE 1.8.0_281
-  * Maven
-  * Selenium-java 3.4.0
-  * Eclipse
-
-
-## Projeto Automação API
-Foi Desenvolvida uma automação de testes para a API cuja documentação está descrita no site (https://reqres.in/).
-
-#### Endpoints:
-- Validar o método POST 
-- Validar o método GET SINGLE USER
-- Valide o método GET LIST USERS
-- Valide o método PATCH
-
-#### Estruturação do Projeto:
-```
-├── /ReqresAPI                                        # Projeto                                                                                          
-    ├── src/main/java                                 #                                                                                                         
-        ├── br.df.lseabra.core                        # Pacote de Core                                                                                        
-            ├── BaseTest.java                         # classe que será extendida pelas classes de teste
-            ├── Constantes.java                       # Interface contendo porta, Url e Content type
-        ├── br.df.lseabra.test                        # Pacote de Testes
-            ├── RegisterTest.java                     #Classe com testes refrentes a "Register"
-            ├── UserTest.java                         #Classe com testes refrentes a "User"
-        ├── br.df.lseabra.suite                       # Pacote de Suite
-            ├── Suite.java                            #Suite de testes
-```
-
-#### Executar o Teste
-Executar pela IDE de sua preferência os arquivos: 
-```
-Suite.java                                     # Suite de teste para quando há login de cliente ao entrar no site
-```
-
-#### Execução dos testes:
-
-![image](https://user-images.githubusercontent.com/49051123/116794905-26ac0480-aaa7-11eb-9c21-bf64ae2837b7.png)
-
-#### Tecnologia:
-
-Tecnologias utilizadas no projeto:
-  * JRE 1.8.0_281
-  * Maven
-  * io.rest-assured 4.0.0 
-  * groovy 3.0.5
-  * Eclipse
-
+  * Python 3.8.8
+  * Appium
+  * Android studio 4.1.3
+  * Virtual Device Name: Pixel_3a_API_30_x86 Target: Android 11.0(Google APIs)
+  * Visual Studio Code
