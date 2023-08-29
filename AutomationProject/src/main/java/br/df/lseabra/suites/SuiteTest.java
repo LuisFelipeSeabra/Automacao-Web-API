@@ -32,7 +32,7 @@ public class SuiteTest {
 		page.acessarTelaInicial();
 		page.clicarEmSignIn();
 		page.setEmail("felipeseabra2405@gmail.com");
-		page.setSenha("felipe");
+		page.setSenha("xxxxx");
 		page.clicarEmEntrar();
 	}
 	
